@@ -2,15 +2,16 @@ import React from 'react';
 // import Logo from '../../assets/img/LogoMain.svg'
 import Logo from '../../assets/img/MaspFlix.png'
 // import ButtonLink from '../components/ButtonLink'
+import { Link } from 'react-router-dom';
 import './Menu.css';
 import Button from '../Button';
 
 function Menu() {
     return (
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                 <img className="Logo" src={Logo} alt="MaspFlix Logo" />
-            </a>
+            </Link>
 
             //Componente não styled
             {/* <ButtonLink className="ButtonLink" href="/">
@@ -18,7 +19,7 @@ function Menu() {
             </ButtonLink> */}
 
             //Componente styled
-            <Button as="a" className="ButtonLink" href="/">
+            <Button as={ Link } className="ButtonLink" to="/cadastro/video/">
                 Novo Video
             </Button>
 
